@@ -24,11 +24,15 @@ class ToDo
   end
 
   def info
-    puts " *=*=*=*=*=*=*=*=* task *=*=*=*=*=*=*=*=* "
-      @tasks.each do |task|
-        puts task.info
-      end
-    puts "*=*=*=*=*=*=*=*=*=*=*=**=*=*=*=*=*=*=*=*"
+    if @tasks.empty?
+      puts "【！】 タスクはありません。"
+    else
+      puts " *=*=*=*=*=*=*=*=* task *=*=*=*=*=*=*=*=* "
+        @tasks.each do |task|
+          puts task.info
+        end
+      puts " *=*=*=*=*=*=*=*=*=*=*=**=*=*=*=*=*=*=*=* "
+    end
   end
 end
 
