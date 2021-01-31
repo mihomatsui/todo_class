@@ -20,7 +20,8 @@ class ToDo
 
   def add(task)
     @tasks << task
-    puts "【追加】[No.#{task.id}]#{task.title}:#{task.content}"
+    print "【追加】"
+    puts task.info
   end
 
   def info
@@ -35,7 +36,9 @@ class ToDo
     end
   end
 
-  def delete
+  def delete(id:)
+    task = @tasks.find{|id| id == 1 }
+    puts "ありません" if task.nil?
   end
 end
 
