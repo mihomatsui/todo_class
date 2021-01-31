@@ -34,6 +34,9 @@ class ToDo
       puts " *=*=*=*=*=*=*=*=*=*=*=**=*=*=*=*=*=*=*=* "
     end
   end
+
+  def delete
+  end
 end
 
 task1 = Task.new(title: "洗濯", content: "7時半までに干し終える")
@@ -44,3 +47,4 @@ todo = ToDo.new
 todo.add(task1)
 todo.add(task2)
 todo.info
+todo.delete(id: 1)
