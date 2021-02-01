@@ -43,6 +43,7 @@ class ToDo
     else
       print "【削除】"
       puts task.info
+      @tasks.delete(task)
     end
   end
 end
@@ -56,3 +57,7 @@ todo.add(task1)
 todo.add(task2)
 todo.info
 todo.delete(id: 1)
+todo.add(task3)
+todo.delete(id: 4)
+todo.delete(id: 3)
+todo.info
