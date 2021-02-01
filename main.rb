@@ -37,8 +37,13 @@ class ToDo
   end
 
   def delete(id:)
-    task = @tasks.find{|id| id == 1 }
-    puts "ありません" if task.nil?
+    task = @tasks.find{|task| task.id == id }
+    if task.nil?
+      puts "【!】該当idのタスクはありません。"
+    else
+      print "【削除】"
+      puts task.info
+    end
   end
 end
 
