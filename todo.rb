@@ -5,8 +5,7 @@ class ToDo
 
   def add(task)
     @tasks << task
-    print "【追加】"
-    puts task.info
+    puts "【追加】#{task.info}"
   end
 
   def info
@@ -26,8 +25,8 @@ class ToDo
     if task.nil?
       puts "【!】該当idのタスクはありません。"
     else
-      print "【削除】"
-      puts task.info
+      puts "【削除】#{task.info}"
+
       @tasks.delete(task)
     end
   end
